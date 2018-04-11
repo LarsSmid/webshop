@@ -20,6 +20,9 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->timestamps();
         });
+        Artisan::call('db:seed', [
+             '--class' => ProductsTableSeeder::class,
+         ]);
     }
 
     /**

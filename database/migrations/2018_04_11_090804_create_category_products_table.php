@@ -14,9 +14,12 @@ class CreateCategoryProductsTable extends Migration
     public function up()
     {
         Schema::create('category_products', function (Blueprint $table) {
-            $table->integer('categroy_id');
-            $table->integer('product_id');
+          $table->integer('category_id');
+          $table->integer('product_id');
         });
+        Artisan::call('db:seed', [
+             '--class' => CategoryProductsTableSeeder::class,
+         ]);
     }
 
     /**
