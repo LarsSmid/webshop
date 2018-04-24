@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Welkom bij de ishop</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    @foreach($categories as $categorie)
+                        <a href="#" class="w3-bar-item w3-button">{{$categorie->name}}</a>
+                    @endforeach
                 </div>
             </div>
         </div>
