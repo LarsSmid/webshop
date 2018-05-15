@@ -14,7 +14,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+      $products = Products::all();
+
+      return view ('/producten', compact('products'));
+        //get category id from parameter
+
+        //get all products from category
+
+        //view all products from category
         return view('/producten');
     }
 

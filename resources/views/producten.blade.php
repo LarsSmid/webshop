@@ -13,7 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  
+                    <ul>
+                    @foreach($products as $product)
+                          <li><a href="" class="w3-bar-item w3-button">{{$product->name}}</a></li>
+                    @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

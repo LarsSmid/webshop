@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     @foreach($categories as $categorie)
-                        <a href="#" class="w3-bar-item w3-button">{{$categorie->name}}</a>
+                        <a href="/producten" class="w3-bar-item w3-button">{{$categorie->name}}</a>
                     @endforeach
                 </div>
             </div>
